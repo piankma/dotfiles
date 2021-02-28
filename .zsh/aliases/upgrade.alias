@@ -1,0 +1,26 @@
+function __upgrade_osx() {
+    echo "\e[1;32m# Upgrading brew \e[0m"
+    brew upgrade
+
+    echo "\e[1;32m# Upgrading casks\e[0m"
+    brew upgrade --cask --greedy
+
+    echo "\e[1;32m# Upgrading AppStore stuff\e[0m"
+    softwareupdate -l
+    softwareupdate -ia --verbose
+
+    echo "\e[1;32m# Done\e[0m"
+}
+
+function __upgrade_linux() {
+    sudo apt update
+    sudo apt upgrade -y
+    sudo apt autoclean -y
+    sudo apt autoremove -y
+}
+
+if [[ $(uname) == "Darwin" ]]; then
+    alias upgrade=__upgrade_osx
+else
+    alias upgrade=__upgrade_linux
+fi

@@ -1,0 +1,11 @@
+function __seba_alias() {
+    if [ -d env ]; then
+        source env/bin/activate
+    else
+        pyenv activate $(basename $(pwd))
+    fi
+}
+
+if ! command pyenv 2>/dev/null; then
+    alias seba=__seba_alias
+fi
