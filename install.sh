@@ -29,7 +29,7 @@ install_mac() {
     brew install htop mc curl wget git
 
     # install oh-my-zsh
-    git clone "https://github.com/ohmyzsh/ohmyzsh.git" .oh-my-zsh
+    git clone "https://github.com/ohmyzsh/ohmyzsh.git" $HOME/.oh-my-zsh
 
     # my files
     git clone "https://github.com/mpianka/dotfiles.git" $HOME/.dotfiles
@@ -58,7 +58,7 @@ install_linux() {
         htop mc curl wget git
 
     # install oh-my-zsh
-    git clone "https://github.com/ohmyzsh/ohmyzsh.git" .oh-my-zsh
+    git clone "https://github.com/ohmyzsh/ohmyzsh.git" $HOME/.oh-my-zsh
 
     # my files
     git clone "https://github.com/mpianka/dotfiles.git" $HOME/.dotfiles
