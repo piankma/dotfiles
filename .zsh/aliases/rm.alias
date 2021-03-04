@@ -1,1 +1,7 @@
-alias rm=trash
+if [[ $(uname) == "Darwin" ]]; then
+    alias rm=trash
+else
+    if [ ! -z $DESKTOP_SESSION ]; then
+        alias rm=trash
+    fi
+fi
