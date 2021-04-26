@@ -23,7 +23,7 @@ install_mac() {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     # install some important zsh-related stuff
-    brew install zsh zsh-autocompletions zsh-syntax-hightlighting fzf
+    brew install zsh zsh-autosuggestions zsh-syntax-hightlighting fzf
 
     # install basics
     brew install htop mc curl wget git
