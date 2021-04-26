@@ -4,7 +4,7 @@ source "${HOME}/.zsh/rc_common"
 # load platform-dependent settings
 case `uname` in
     Darwin)
-        source "${HOME}/.zsh/rc_osx"
+        source "${HOME}/.zsh/rc_darwin"
     ;;
     Linux)
         source "${HOME}/.zsh/rc_linux"
