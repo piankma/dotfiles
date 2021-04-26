@@ -9,3 +9,6 @@ export LC_MONETARY="pl_PL.UTF-8"
 export LC_NUMERIC="pl_PL.UTF-8"
 export LC_TIME="pl_PL.UTF-8"
 export LC_ALL=
+
+# insecure completion-dependent dirs
+ZSH_DISABLE_COMPFIX=true
