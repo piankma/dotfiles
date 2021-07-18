@@ -1,6 +1,6 @@
 function get_hostname_color() {
     case $(hostname) in
-    Macbook-Pro.local)
+    MacBook-Pro.local)
         echo "%F{245}"
         ;;
     pixelbook)
