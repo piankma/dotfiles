@@ -1,21 +1,21 @@
 function get_hostname_color() {
     case $(hostname) in
-    MacBook-Pro.local)
+    MacBookM1.local)
         echo "%F{245}"
         ;;
-    pixelbook)
+    t420)
         echo "%F{242}"
         ;;
     pc)
         echo "%F{38}"
         ;;
-    myszyniec)
+    homeassistant)
         echo "%F{33}"
         ;;
-    kadzidlo)
+    print3d)
         echo "%F{63}"
         ;;
-    lyse)
+    myszyniec)
         echo "%F{28}"
         ;;
     zbojna)
