@@ -1,1 +1,5 @@
 # initialization settings for linux machines
+if [ -x /usr/bin/neofetch ]
+then 
+	neofetch
+fi

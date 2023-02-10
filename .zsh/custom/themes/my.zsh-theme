@@ -29,7 +29,7 @@ function get_hostname_color() {
 
 function get_user() {
     if [ "$EUID" -eq 0 ]; then
-        echo "%F{red}%f"
+        echo "%F{red}$(id -un)%f"
     else
         echo "%F{214}$(id -un)%f"
     fi
@@ -62,12 +62,12 @@ function get_git() {
     fi
 }
 
-function get_hg() {
-    HG_BRANCH="$(hg prompt '{branch}' 2>/dev/null)"
-    if [ $? = 0 ]; then
-        echo " at %F{252}hg:%f%F{198}${HG_BRANCH}%f"
-    fi
-}
+#function get_hg() {
+#    HG_BRANCH="$(hg prompt '{branch}' 2>/dev/null)"
+#    if [ $? = 0 ]; then
+#        echo " at %F{252}hg:%f%F{198}${HG_BRANCH}%f"
+#    fi
+#}
 
 function get_python() {
     VER=$(python -V 2>&1 | tr -d 'Python ')
@@ -85,5 +85,5 @@ function get_prompt_char() {
     fi
 }
 
-PROMPT='$(get_user) $(get_machine_name) $(get_pwd)$(get_git)$(get_hg)$(get_python)
+PROMPT='$(get_user) $(get_machine_name) $(get_pwd)$(get_git)$(get_python)
 $(get_prompt_char) '
