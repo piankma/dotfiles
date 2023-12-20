@@ -12,7 +12,7 @@ function get_hostname_color() {
     homeassistant)
         echo "%F{33}"
         ;;
-    print3d)
+    t530)
         echo "%F{63}"
         ;;
     myszyniec)
